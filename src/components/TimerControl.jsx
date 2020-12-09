@@ -16,7 +16,7 @@ const TimerControl = ({id, time, pauseTime}) => {
     return () => {
       clearInterval(interval.current)
     }
-  }, [])
+  }, [pauseTime, time])
 
   return (
     <>

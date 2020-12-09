@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import moment from 'moment'
 import {addTimer} from '../store/actions'
 import {saveToLocalStore} from '../assets/js/helpers'
+import playArrowImg from '../assets/imgs/play_button_arrow.svg'
 
 const InputField = () => {
   const dispatch = useDispatch()
@@ -33,7 +34,7 @@ const InputField = () => {
         type='text'
       />
       <button onClick={addToList}>
-        <span className='material-icons'>play_arrow</span>
+        <img src={playArrowImg} alt='add button' />
       </button>
     </div>
   )

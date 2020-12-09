@@ -2,6 +2,7 @@ import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {removeTimer} from '../../store/actions'
 import {saveToLocalStore} from '../../assets/js/helpers'
+import removeCircleImg from '../../assets/imgs/remove_circle_outline.svg'
 
 const RemoveButton = ({id}) => {
   const dispatcher = useDispatch()
@@ -14,9 +15,9 @@ const RemoveButton = ({id}) => {
   }
 
   return (
-    <span onClick={remove} className='material-icons remove'>
-      remove_circle_outline
-    </span>
+    <button onClick={remove}>
+      <img src={removeCircleImg} alt='remove timer' />
+    </button>
   )
 }
 

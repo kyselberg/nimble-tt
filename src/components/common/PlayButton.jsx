@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import moment from 'moment'
 import {resumeTimer} from '../../store/actions'
 import {saveToLocalStore} from '../../assets/js/helpers'
+import playCircleImg from '../../assets/imgs/play_circle_outline.svg'
 
 const PlayButton = ({id, timer}) => {
   const dispatch = useDispatch()
@@ -14,9 +15,9 @@ const PlayButton = ({id, timer}) => {
   }
 
   return (
-    <span onClick={play} className='material-icons'>
-      play_circle_outline
-    </span>
+    <button onClick={play}>
+      <img src={playCircleImg} alt='resume timer' />
+    </button>
   )
 }
 
